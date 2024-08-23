@@ -1,0 +1,70 @@
+@import "./variables";
+@import "./global";
+
+header {
+   background: transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100000;
+    padding: 27px 17px;
+    @extend .flex;
+    justify-content: space-between;
+    transition: all 0.5s ease;
+    .logo{
+        font-size: 33px;
+        color: $text-color;
+        font-weight: 700;
+        span{
+            color: $main-color;
+        }
+    }
+    // navbar kısmı
+
+    .navbar{
+        @extend .flex;
+       a{
+        color: $text-color;
+        font-size: $p-font;
+        font-weight: 500;
+        margin: 15px 22px;
+        transition: all 0.5s ease;
+        &:hover{
+            color: $main-color;
+        }
+       }
+    }
+    .header-right{
+        @extend .flex;
+        a{
+            font-size: 20px;
+            color: $text-color;
+            margin-right: 18px;
+            margin-left: 5px;
+            transition: all 0.5s ease;
+            &:hover{
+                color: $main-color;
+                transform: translateY(-5px);
+            }
+        }
+        a:first-child {
+            font-size: $p-font;
+            margin-right: 20px;
+        } 
+    }
+}
+
+// responsive
+
+@media(max-width: 1230px){
+    .navbar li{
+        display: none;
+    }
+}
+
+@media(max-width: 700px){
+    .header-right a{
+        display: none;
+    }
+    
+}

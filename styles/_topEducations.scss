@@ -1,0 +1,72 @@
+@import "./variables";
+
+.center-text{
+    text-align: center;
+    h2{
+      font-size: $h2-font;
+      font-weight: 800;
+    }
+}
+
+.top-educations-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    align-items: center;
+    gap: 3rem;
+    margin-top: 5rem;
+    .box{
+        position: relative;
+        margin: 20px 0;
+    }
+    img{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+        filter: brightness(70%);
+        display: block;
+        transition: all 0.2s ease;
+        &:hover{
+            transform: scale(1.04);
+            cursor: pointer;
+        }
+    }
+    h3{
+        position: absolute;
+        left: 25px;
+        bottom: 85px;
+        font-size: 18px;
+        font-weight: 500;
+        i{
+            color: $main-color;
+            margin-right: 10px;
+        }
+    }
+    h4{
+       position: absolute;
+       left: 25px;
+       bottom: 55px;
+       font-size: 18px;
+       font-weight: 500;
+       i{
+        color: $main-color;
+        margin-right: 10px;
+       } 
+    }
+    h5{
+        position: absolute;
+        left: 25px;
+        bottom: 25px;
+        font-size: 18px;
+        font-weight: 500;
+        i{
+            color: $main-color;
+            margin-right: 10px;
+        }
+    }
+}
+
+.center-btn{
+    text-align: center;
+    margin-top: 4rem;
+}
